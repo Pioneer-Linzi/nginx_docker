@@ -7,6 +7,6 @@ RUN mkdir /data/log/nginx -p
 RUN chown nginx.nginx -R /data/log/nginx
 # ADD html /data/web
 # ADD nginx.conf /etc/nginx/nginx.conf
-ADD conf.d/*.conf /etc/nginx/conf.d/*.conf
+COPY conf.d/ /etc/nginx/conf.d/
 EXPOSE 80
 ENTRYPOINT nginx -g "daemon off;"

@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  nginx_docker:
+    image: nginx_docker
+    build: .
+    ports:
+      - 80
